@@ -30,81 +30,12 @@ The project implements and compares three ensemble boosting methods:
 3. **Gradient Boosting**: Scikit-learn's GradientBoostingClassifier
 4. **Weighted Ensemble**: A combination of the above models
 
-## Repository Structure
-
-```
-├── data/                      # Data directory (not included in repo due to size)
-│   ├── train.csv             # Training data (download separately)
-│   └── test.csv              # Test data (download separately)
-│
-├── notebooks/                 # Jupyter notebooks for exploration and visualization
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_model_training.ipynb
-│   └── 04_model_evaluation.ipynb
-│
-├── src/                       # Source code
-│   ├── __init__.py
-│   ├── data_preprocessing.py  # Functions for data cleaning and preprocessing
-│   ├── feature_engineering.py # Physics-inspired feature creation
-│   ├── model_training.py      # Model training and optimization
-│   ├── model_evaluation.py    # Functions for evaluating models
-│   └── ensemble.py            # Ensemble creation and prediction
-│
-├── scripts/                   # Execution scripts
-│   ├── run_preprocessing.py   # Script to run data preprocessing
-│   ├── run_training.py        # Script to train models
-│   └── generate_submission.py # Script to generate competition submission
-│
-├── requirements.txt           # Python dependencies
-├── setup.py                   # Package installation script
-├── README.md                  # This file
-└── LICENSE                    # License information
-```
 
 ## Installation
 
-1. Clone this repository:
-```bash
-git clone https://github.com/username/higgs-boson-classification.git
-cd higgs-boson-classification
-```
-
-2. Create a virtual environment and install dependencies:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-3. Download the dataset from the [competition page](https://www.kaggle.com/c/higgs-boson) or the [UCI Repository](https://archive.ics.uci.edu/ml/datasets/HIGGS) and place the files in the `data/` directory.
+Download the dataset from the [competition page](https://www.kaggle.com/c/higgs-boson) or the [UCI Repository](https://archive.ics.uci.edu/ml/datasets/HIGGS) and place the files in the `data/` directory.
 
 ## Usage
-
-### Data Preprocessing
-
-```bash
-python scripts/run_preprocessing.py
-```
-
-This script:
-- Loads the raw data
-- Standardizes features
-- Applies physics-inspired feature engineering
-- Removes highly correlated and low-variance features
-- Saves the processed data
-
-### Model Training
-
-```bash
-python scripts/run_training.py
-```
-
-This script:
-- Loads the preprocessed data
-- Trains XGBoost, LightGBM, and Gradient Boosting models
-- Performs hyperparameter optimization
-- Saves trained models
 
 ### Generate Submission
 
@@ -173,7 +104,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Acknowledgements
 
 This project uses data from the HIGGS dataset published with Baldi, Sadowski, and Whiteson, "Searching for Exotic Particles in High-Energy Physics with Deep Learning."
-
-## Contact
-
-For questions or feedback, please open an issue in the GitHub repository.
